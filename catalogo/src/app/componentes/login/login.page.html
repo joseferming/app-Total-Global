@@ -8,14 +8,14 @@
   <img src="assets/icon/total.jpg" alt="">
   <ion-item>
       <ion-label position="floating">Correo electronico</ion-label>
-      <ion-input type="text" name="email"></ion-input>
+      <ion-input [(ngModel)]="userName" type="text" name="email"></ion-input>
 
   </ion-item>
   <ion-item>
       <ion-label position="floating">contraseña</ion-label>
-      <ion-input type="password" name="clave"></ion-input>
+      <ion-input [(ngModel)]="passWord" type="password" name="clave"></ion-input>
 
   </ion-item>
   <br>
-  <ion-button (click)="onSubmitlogin()" expand="block">Iniciar sesion</ion-button>
+  <ion-button (click)="signin()" expand="block">Iniciar sesion</ion-button>
 </ion-content>
