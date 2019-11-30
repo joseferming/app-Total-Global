@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShareService } from 'src/app/pages/share/share';
 import { ToastController } from '@ionic/angular';
-import { RouterLink, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +15,6 @@ export class LoginPage implements OnInit {
   passWord:string;
 
   constructor(public share:ShareService, public toastController: ToastController, private router: Router) { }
- 
   ngOnInit() {
   }
  
@@ -23,10 +22,10 @@ export class LoginPage implements OnInit {
 
 
     this.share.login(this.userName,this.passWord).subscribe(data=>{
-      async function presentToast() {
-    
+      let presentToast= async() =>
+       {
+        
       if(data==null){
-  
         const toast = await this.toastController.create({
           message: 'Usuario/clave incorrecto',
           duration: 2000
@@ -34,16 +33,14 @@ export class LoginPage implements OnInit {
         toast.present();
         
       }else{
-        this.router.navigate('/tab1');
+        this.router.navigateByUrl('/tab1');
         
       
       }
     }
+    presentToast();
     });
-
-  
-}
+  }
 }
 
- 
 

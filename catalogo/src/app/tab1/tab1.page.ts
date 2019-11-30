@@ -12,10 +12,15 @@ export class Tab1Page {
   componentes: Componente[] = [
     {
       icon: 'home', 
-      name: 'azul',
+      name: 'Inicio',
       redirectTo: '/login'
-
+    },
+    {
+      icon: 'cloud-upload', 
+      name: 'Agregar producto',
+      redirectTo: '/tab2'
     }
+
   ];
 
   constructor( private menuCtrl: MenuController ) { }

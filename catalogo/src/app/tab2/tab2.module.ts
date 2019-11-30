@@ -4,11 +4,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
+import { HttpModule } from "@angular/http";
+
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
+    HttpModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab2Page }])
   ],

@@ -3,5 +3,10 @@
         "icon": "home",
         "name": "Inicio",
         "redirectTo": "/tab1"
-    }
+    },
+    {
+        "icon": "cloud-upload", 
+        "name": "Agregar producto",
+        "redirectTo": "/tab2"
+      }
 ]
